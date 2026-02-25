@@ -11,8 +11,10 @@
         {
             imports = [
                 # general
+				self.nixosModules.general
+				self.nixosModules.gnome
 
-                # desktop specific
+                # vm specific
                 self.nixosModules.vm-hardware
 
                 # disko
