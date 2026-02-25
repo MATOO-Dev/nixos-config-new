@@ -9,11 +9,11 @@
                         type = "gpt";
                         partitions = {
                             # apprently optional, esp is required
-                            # boot = {
-                            #     name = "boot";
-                            #     size = "1M";
-                            #     type = "EF02";
-                            # };
+                            boot = {
+                                name = "boot";
+                                size = "1M";
+                                type = "EF02";
+                            };
                             # esp = efi system partition
                             esp = {
                                 name = "ESP";
@@ -71,6 +71,13 @@
                                                 ];
                                             };
                                             "/nix" = {
+                                                mountpoint = "/nix";
+                                                mountOptions = [
+                                                    "compress=zstd"
+                                                    "noatime"
+                                                ];
+                                            };
+                                            "/var/log" = {
                                                 mountpoint = "/nix";
                                                 mountOptions = [
                                                     "compress=zstd"
