@@ -27,9 +27,9 @@
 
 			networking.hostName = "matoo-vm";
 
-			networking.networkmanager.enable = "true";
+			networking.networkmanager.enable = true;
 
-			services.xserver.enable = "true";
+			services.xserver.enable = true;
 
             system.stateVersion = "25.11";
         };
