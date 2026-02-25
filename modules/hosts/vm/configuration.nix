@@ -35,6 +35,17 @@
 
 			services.displayManager.ly.enable = true;
 
+			users.users.matoo = {
+				isNormalUser = true;
+				description = "MATOO";
+				extraGroups = [
+					"networkmanager"
+					"wheel"
+				];
+				# only used once right after installing
+				initialPassword = "12345";
+			};
+
             system.stateVersion = "25.11";
         };
 }
