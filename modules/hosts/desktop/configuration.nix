@@ -13,7 +13,7 @@
                 # general
 
                 # desktop specific
-                self.nixosModules.matoo-desktop
+                self.nixosModules.desktop-hardware
 
                 # disko
                 inputs.disko.nixosModules.disko
