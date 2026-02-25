@@ -47,7 +47,7 @@
 			};
 
 			# gnome
-			services.desktopManager.gnome.enable = true;
+			# services.desktopManager.gnome.enable = true;
 
 			# niri
 			programs.niri.enable = true;
