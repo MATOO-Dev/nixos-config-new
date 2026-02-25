@@ -1,17 +1,31 @@
 { inputs, self, ... }:
 {
-    flake.nixosConfigurations.matoo-vm = inputs.nixpkgs.lib.nisosSystem {
+    flake.nixosConfigurations.matoo-desktop = inputs.nixpkgs.lib.nixosSystem {
         modules = [
-            self.nixosModules.matoo-vm
+            self.nixosModules.matoo-desktop
         ];
     };
 
-    flake.nixosModules.matoo-vm =
+    flake.nixosModules.matoo-desktop =
         { pkgs, ... }:
         {
             imports = [
-                self.nixosModules.vm
+                # general
+
+                # desktop specific
+                self.nixosModules.desktop
+
+                # disko
                 inputs.disko.nixosModules.disko
+                self.diskoConfigurations.matoo-desktop
             ];
+
+            boot = {
+                loader.grub.enable = true;
+                loader.grub.efiSupport = true;
+                loader.grub.efiInstallAsRemovable = true;
+            };
+
+            system.stateVersion = "25.11";
         };
 }
