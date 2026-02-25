@@ -31,9 +31,9 @@
 
 			networking.networkmanager.enable = true;
 
-			services.xserver.enable = true;
+			services.xserver.enable = false;
 
-			services.displayManager.ly.enable = true;
+			# services.displayManager.ly.enable = true;
 
 			users.users.matoo = {
 				isNormalUser = true;
