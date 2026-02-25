@@ -3,7 +3,7 @@
         disk = {
             primary = {
                 type = "disk";
-                device = "/dev/disk/by-id/?";
+                device = "/dev/disk/by-uuid/1980-01-01-00-00-00-00";
                 content = {
                     type = "gpt";
                     partitions = {
@@ -36,14 +36,11 @@
                                 type = "luks";
                                 name = "cryptroot";
                                 # disable settings.keyFile if you want to use interactive password entry
-                                #passwordFile = "/tmp/secret.key"; # Interactive
+                                passwordFile = "/tmp/secret.key"; # Interactive
                                 settings = {
                                     allowDiscards = true;
-                                    keyFile = "/tmp/secret.key";
+                                    # keyFile = "/tmp/secret.key";
                                 };
-                                additionalKeyFiles = [
-                                    "/tmp/additionalSecret.key"
-                                ];
                                 content = {
                                     type = "btrfs";
                                     extraArgs = [

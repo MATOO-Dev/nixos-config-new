@@ -1,6 +1,6 @@
 { inputs, self, ... }:
 {
-    flake.nixosConfigurations.matoo-vm = inputs.nixpkgs.lib.nisosSystem {
+    flake.nixosConfigurations.matoo-vm = inputs.nixpkgs.lib.nixosSystem {
         modules = [
             self.nixosModules.matoo-vm
         ];
