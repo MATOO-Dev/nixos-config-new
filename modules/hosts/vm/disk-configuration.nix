@@ -4,7 +4,7 @@
             disk = {
                 primary = {
                     type = "disk";
-                    device = "/dev/vda";
+                    device = "/dev/by-id/ata-QEMU_DVD-ROM_QM00005";
                     content = {
                         type = "gpt";
                         partitions = {
