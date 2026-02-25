@@ -42,7 +42,7 @@
                                     type = "luks";
                                     name = "cryptroot";
                                     # disable settings.keyFile if you want to use interactive password entry
-                                    passwordFile = "/tmp/secret.key"; # Interactive
+                                    # passwordFile = "/tmp/secret.key"; # Interactive
                                     settings = {
                                         # discard means unused blocks are zeroed
                                         # the data is still encrypted, but one can
