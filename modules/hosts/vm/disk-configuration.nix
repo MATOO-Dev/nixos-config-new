@@ -37,7 +37,7 @@
                                 };
                             };
                             luks = {
-                                size = "100%";
+                                size = "100%FREE";
                                 content = {
                                     type = "luks";
                                     name = "cryptroot";
