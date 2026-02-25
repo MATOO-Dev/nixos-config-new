@@ -7,6 +7,7 @@
 				"networkmanager"
 				"wheel"
 			];
+			# only used once right after installing
 			initialPassword = "12345";
 		};
 	};

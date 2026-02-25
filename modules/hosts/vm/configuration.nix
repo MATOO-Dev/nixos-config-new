@@ -11,8 +11,8 @@
         {
             imports = [
                 # general
-				self.nixosModules.general
-				self.nixosModules.gnome
+				# self.nixosModules.general
+				# self.nixosModules.gnome
 
                 # vm specific
                 self.nixosModules.vm-hardware
