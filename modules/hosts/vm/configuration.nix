@@ -33,6 +33,8 @@
 
 			services.xserver.enable = true;
 
+			services.displayManager.enable = true;
+
             system.stateVersion = "25.11";
         };
 }
