@@ -61,6 +61,8 @@
 				swaylock
 				mako
 				swayidle
+				git
+				vim
 			];
 
             system.stateVersion = "25.11";
