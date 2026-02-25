@@ -21,10 +21,15 @@
             ];
 
             boot = {
-                loader.grub.enable = true;
-                loader.grub.efiSupport = true;
-                loader.grub.efiInstallAsRemovable = true;
+                loader.systemd-boot.enable = true;
+                loader.efi.canTouchEfiVariables = true;
             };
+
+			networking.hostName = "matoo-desktop";
+
+			networking.networkmanager.enable = "true";
+
+			services.xserver.enable = "true";
 
             system.stateVersion = "25.11";
         };

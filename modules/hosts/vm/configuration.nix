@@ -13,7 +13,7 @@
                 # general
 
                 # desktop specific
-                self.nixosModules.vm
+                self.nixosModules.desktop
 
                 # disko
                 inputs.disko.nixosModules.disko
@@ -21,10 +21,15 @@
             ];
 
             boot = {
-                loader.grub.enable = true;
-                loader.grub.efiSupport = true;
-                loader.grub.efiInstallAsRemovable = true;
+                loader.systemd-boot.enable = true;
+                loader.efi.canTouchEfiVariables = true;
             };
+
+			networking.hostName = "matoo-vm";
+
+			networking.networkmanager.enable = "true";
+
+			services.xserver.enable = "true";
 
             system.stateVersion = "25.11";
         };
