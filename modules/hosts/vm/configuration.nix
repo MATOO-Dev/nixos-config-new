@@ -33,7 +33,7 @@
 
 			services.xserver.enable = false;
 
-			# services.displayManager.ly.enable = true;
+			services.displayManager.ly.enable = true;
 
 			users.users.matoo = {
 				isNormalUser = true;
