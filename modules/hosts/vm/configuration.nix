@@ -43,6 +43,7 @@
 					"wheel"
 				];
 				# only used once right after installing
+				# dont forget to set password
 				initialPassword = "12345";
 			};
 

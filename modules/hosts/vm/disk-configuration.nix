@@ -4,6 +4,8 @@
             disk = {
                 primary = {
                     type = "disk";
+					# fix for out of space error that happens only in VMs
+					imageSize = "10G";
                     device = "/dev/by-id/ata-QEMU_DVD-ROM_QM00005";
                     content = {
                         type = "gpt";
