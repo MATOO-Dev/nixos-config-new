@@ -32,7 +32,12 @@
 			networking.networkmanager.enable = true;
 
 			# disabled temporarily
-			# services.xserver.enable = true;
+			services.xserver.enable = true;
+
+			# vm specific stuff
+			services.spice-vdagentd.enable = true;
+			services.xserver.videoDrivers = ["virtio"];
+			hardware.graphics.enable = true;
 
 			users.users.matoo = {
 				isNormalUser = true;
