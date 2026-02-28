@@ -1,12 +1,19 @@
 { ... }: {
 	flake.nixosModules.niri = { pkgs, ... }: {
-		programs.niri.enable = true;
-		security.polkit.enable = true;
-		services.gnome.gnome-keyring.enable = true;
-		security.pam.services.swaylock = {};
-		programs.waybar.enable = true;
+		programs = {
+			niri.enable = true;
+		};
 
-		services.xserver.enable = true;
+		services = {
+			gnome.gnome-keyring.enable = true;
+			xserver.enable = true;
+		};
+
+		security = {
+			pam.services.swaylock = {};
+			polkit.enable = true;
+		};
+
 
 		environment.systemPackages = with pkgs; [
 			alacritty

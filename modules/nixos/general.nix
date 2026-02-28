@@ -12,6 +12,7 @@
 			initialPassword = "12345";
 		};
 
+		# login screen
 		services.displayManager.ly.enable = true;
 	};
 }
