@@ -1,11 +1,7 @@
-{ inputs, ... }: {
+{ ... }: {
 	flake.nixosModules.nix = { ... }: {
 		nix = {
 			settings.experimental-features = [ "nix-command" "flakes" ];
-			# set nix path to flake pkgs (fixes missing channel)
-			nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
-			# reuse flake registry for speedup
-			registry.nixpkgs.flake = inputs.nixpkgs;
 		};
 		nixpkgs.config = {
 			allowUnfree = true;
@@ -21,6 +17,7 @@
 		# 	];
 		# 	dates = "03:00";
 		# 	randomizedDelaySec = "15min";
+		# # if this ends up being used: inputs goes in outer function scope
 		# 	channel = inputs.flake.nixpkgs;
 		# };
 	};
