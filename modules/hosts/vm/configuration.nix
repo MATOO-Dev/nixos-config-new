@@ -31,9 +31,8 @@
 
 			networking.networkmanager.enable = true;
 
-			services.xserver.enable = false;
+			services.xserver.enable = true;
 
-			# services.displayManager.ly.enable = true;
 
 			users.users.matoo = {
 				isNormalUser = true;
@@ -47,21 +46,11 @@
 				initialPassword = "12345";
 			};
 
-			# gnome
-			# services.desktopManager.gnome.enable = true;
+			# plasma
+			services.desktopManager.plasma6.enable = true;
+			services.displayManager.sddm.enable = true;
 
-			# niri
-			programs.niri.enable = true;
-			security.polkit.enable = true;
-			services.gnome.gnome-keyring.enable = true;
-			security.pam.services.swaylock = {};
-			programs.waybar.enable = true;
 			environment.systemPackages = with pkgs; [
-				alacritty
-				fuzzel
-				swaylock
-				mako
-				swayidle
 				git
 				vim
 			];
