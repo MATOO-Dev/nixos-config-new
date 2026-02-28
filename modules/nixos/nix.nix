@@ -5,7 +5,7 @@
 			# set nix path to flake pkgs (fixes missing channel)
 			nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 			# reuse flake registry for speedup
-			nix.registry.nixpkgs.flake = inputs.nixpkgs;
+			registry.nixpkgs.flake = inputs.nixpkgs;
 		};
 		nixpkgs.config = {
 			allowUnfree = true;
