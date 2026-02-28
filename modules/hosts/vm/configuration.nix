@@ -31,8 +31,8 @@
 
 			networking.networkmanager.enable = true;
 
-			services.xserver.enable = true;
-
+			# disabled temporarily
+			# services.xserver.enable = true;
 
 			users.users.matoo = {
 				isNormalUser = true;
@@ -45,10 +45,6 @@
 				# dont forget to set password
 				initialPassword = "12345";
 			};
-
-			# plasma
-			services.desktopManager.plasma6.enable = true;
-			services.displayManager.sddm.enable = true;
 
 			environment.systemPackages = with pkgs; [
 				git
