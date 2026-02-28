@@ -15,6 +15,7 @@
 				self.nixosModules.general
 				self.nixosModules.networking
 				self.nixosModules.niri
+				self.nixosModules.printing
 				self.nixosModules.virtualization
 
                 # vm specific
