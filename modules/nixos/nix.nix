@@ -1,8 +1,11 @@
 { ... }: {
-	flake.nixosModules.nix = { ... }: {
+	flake.nixosModules.nix = { inputs, ... }: {
 		nix = {
 			settings.experimental-features = [ "nix-command" "flakes" ];
-			channel.enable = true;
+			# set nix path to flake pkgs (fixes missing channel)
+			nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+			# reuse flake registry for speedup
+			nix.registry.nixpkgs.flake = inputs.nixpkgs;
 		};
 		nixpkgs.config = {
 			allowUnfree = true;
