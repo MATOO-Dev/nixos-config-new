@@ -1,5 +1,5 @@
-{ ... }: {
-	flake.nixosModules.nix = { inputs, ... }: {
+{ inputs, ... }: {
+	flake.nixosModules.nix = { ... }: {
 		nix = {
 			settings.experimental-features = [ "nix-command" "flakes" ];
 			# set nix path to flake pkgs (fixes missing channel)
