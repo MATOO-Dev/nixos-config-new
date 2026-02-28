@@ -51,9 +51,24 @@
 				initialPassword = "12345";
 			};
 
+			# ly
+			services.displayManager.ly.enable = true;
+
+			# niri
+			programs.niri.enable = true;
+			security.polkit.enable = true;
+			services.gnome.gnome-keyring.enable = true;
+			security.pam.services.swaylock = {};
+			programs.waybar.enable = true;
+
 			environment.systemPackages = with pkgs; [
 				git
 				vim
+				alacritty
+				fuzzel
+				swaylock
+				mako
+				swayidle
 			];
 
             system.stateVersion = "25.11";
