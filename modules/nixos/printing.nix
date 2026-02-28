@@ -1,5 +1,5 @@
 { ... }: {
-	flake.nixosModules.printing = { pkgs, lib, config, ... }: {
+	flake.nixosModules.printing = { pkgs, ... }: {
 		# enable CUPS to print documents
 		services.printing = {
 			enable = true;
@@ -17,8 +17,10 @@
 			extraBackends = [ pkgs.hplipWithPlugin pkgs.sane-airscan ];
 		};
 
-		users.users = lib.mapAttrs (user: {
-			extraGroups = (user.extraGroups or []) ++ [ "scanner" "lp" ];
-		}) config.users.users;
+		# add user to printing and scanning groups
+		users.users.matoo.extraGroups = [
+			"lp"
+			"scanner"
+		];
 	};
 }
