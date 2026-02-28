@@ -6,6 +6,11 @@
 			xserver.videoDrivers = ["virtio"];
 		};
 
-		hardware.graphics.enable = true;
+		# needed?
+		# hardware.graphics.enable = true;
+
+		# for future hosts
+		# virtualisation.libvirtd.enable = true;
+		# boot.kernelModules = [ "kvm-amd" ];
 	};
 }

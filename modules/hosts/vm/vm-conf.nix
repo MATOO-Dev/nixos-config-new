@@ -11,12 +11,17 @@
         {
             imports = [
                 # general
-				self.nixosModules.bootloader
 				self.nixosModules.general
+
+				# shared
+				self.nixosModules.bootloader
 				self.nixosModules.networking
 				self.nixosModules.niri
+				self.nixosModules.nix
 				self.nixosModules.printing
 				self.nixosModules.virtualization
+
+				# home manager
 
                 # vm specific
                 self.nixosModules.vm-hardware
