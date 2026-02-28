@@ -10,7 +10,8 @@
 		};
 
 		security = {
-			pam.services.swaylock = {};
+			# disabled because of vm
+			# pam.services.swaylock = {};
 			polkit.enable = true;
 		};
 
