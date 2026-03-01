@@ -28,7 +28,7 @@
 				self.nixosModules.virtualization
 
 				# home
-				inputs.home-manager.flakeModules.home-manager
+				# inputs.home-manager.flakeModules.home-manager
 				# self.nixosModules.protonmail
 
                 # hardware
