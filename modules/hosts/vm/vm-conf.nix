@@ -15,9 +15,11 @@
 
 				# system
 				self.nixosModules.audio
+				self.nixosModules.bluetooth
 				self.nixosModules.bootloader
 				self.nixosModules.fonts
 				self.nixosModules.input
+				self.nixosModules.kernel
 				self.nixosModules.locale
 				self.nixosModules.networking
 				self.nixosModules.niri
