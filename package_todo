@@ -1,0 +1,137 @@
+########################
+#### maybe packages ####
+########################
+
+amberol? (music player)
+amd-ucode?
+assimp? (asset importer lib)
+bluetui?
+cargo-deny?
+coolercontrol?
+corectrl?
+dolphin?
+easytag? (metadata tagger)
+efibootmgr? (needed?)
+eog (eye of gnome)?
+fancontrol-gui?
+fish?
+glad (opengl library?)
+gnome-disk-utility?
+identity (media comparer)?
+inter-font?
+it87 (kernel module for fans)?
+kolourpaint?
+kruler?
+libreoffice?
+mangohud?
+master-pdf-editor?
+mpv (video player)?
+noto-fonts?
+onlyoffice-bin?
+openfortivpn?
+pdfpc?
+qtcreator?
+scons?
+sticker-convert?
+stow?
+ms-fonts?
+virt-manager?
+xpadneo-dkms?
+yt-dlg?
+vicinae? (app launcher)
+wget?
+
+#############################
+#### definitely packages ####
+#############################
+
+anki
+ark (kde zip tool)
+audacity
+bacon
+bazecor
+beyondallreason
+blender
+chromium
+clang
+clang-tools
+discord/vencord/vesktop
+discover-overlay
+drawio-desktop
+element-desktop
+evince (pdf viewer)
+ffmpeg
+firefox
+foliate (ebook reader)
+fzf (fuzzy finder)
+gamemode
+gdb (debugger)
+gimp
+git
+git-lfs
+gitkraken
+gnome-keyring
+gnuplot
+godot
+gpu-screen-recorder-ui
+handbrake
+heroic-games-launcher
+home-manager
+hyprland/idle/lock/picker/shot/sunset/cursor/grpahics/polkitagent
+kdeconnect
+kdenlive
+kitty
+lazygit
+localsend
+mission-center
+nautilus
+neofetch
+neovim
+nerd-fonts-symbols-mono
+niri
+nix-ld
+nh (nix helper)
+numbat
+obfuscate
+obsidian
+pandoc
+pavucontrol
+pdfarranger
+pixieditor
+prism-launcher
+proton-authenticator
+proton-mail
+proton-mail-brige
+proton-vpn
+protonplus
+r2modman
+renderdoc
+ripgrep
+rmtrash
+rustlings
+scrcpy
+sherlock-launcher
+signal
+simple-scan
+spotify
+steam
+syncthing
+thunderbird
+timeshift/snapper
+timeshift-autosnap
+tldr
+tree
+typst
+unzip
+valgrind
+vim
+vintagestory
+vlc
+waybar
+xdg-desktop-portal-gtk/hyprland/wlr
+xournal++
+yt-dlp
+zapzap
+zoxide
+zsh
+zsh-autosuggestions/completions/syntax-hightlighting/vi-mode
