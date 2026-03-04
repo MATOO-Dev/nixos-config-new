@@ -6,44 +6,49 @@
         ];
     };
 
-    flake.nixosModules.matoo-vm =
-        { pkgs, ... }:
-        {
-            imports = [
-                # general
-				self.nixosModules.general
+    flake.nixosModules.matoo-vm = { pkgs, ... }:
+	{
+		imports = [
+			# general
+			self.nixosModules.general
 
-				# system
-				self.nixosModules.audio
-				# self.nixosModules.bluetooth
-				self.nixosModules.bootloader
-				self.nixosModules.fonts
-				self.nixosModules.input
-				# self.nixosModules.kernel
-				self.nixosModules.locale
-				self.nixosModules.networking
-				self.nixosModules.niri
-				self.nixosModules.nix
-				self.nixosModules.printing
-				self.nixosModules.virtualization
+			# system
+			self.nixosModules.audio
+			# self.nixosModules.bluetooth
+			self.nixosModules.bootloader
+			self.nixosModules.fonts
+			self.nixosModules.input
+			# self.nixosModules.kernel
+			self.nixosModules.locale
+			self.nixosModules.networking
+			self.nixosModules.niri
+			self.nixosModules.nix
+			self.nixosModules.printing
+			self.nixosModules.virtualization
 
-				# home
-				inputs.home-manager.flakeModules.home-manager
-				# self.nixosModules.protonmail
+			# hardware
+			self.nixosModules.vm-hardware
+			inputs.disko.nixosModules.disko
+			self.diskoConfigurations.matoo-vm
+		];
 
-                # hardware
-				self.nixosModules.vm-hardware
-                inputs.disko.nixosModules.disko
-                self.diskoConfigurations.matoo-vm
-            ];
+		networking.hostName = "matoo-vm";
 
-			networking.hostName = "matoo-vm";
+		environment.systemPackages = with pkgs; [
+			git
+			vim
+		];
 
-			environment.systemPackages = with pkgs; [
-				git
-				vim
-			];
+		system.stateVersion = "25.11";
+	};
 
-            system.stateVersion = "25.11";
-        };
+	flake.home-modules.matoo-home = {pkgs, ...}:
+	{
+		imports = [
+			inputs.home-manager.flakeModules.home-manager
+			self.homeModules.git
+			# self.nixosModules.protonmail
+		];
+
+	};
 }
