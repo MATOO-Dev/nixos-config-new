@@ -4,6 +4,7 @@
         modules = [
 			# general
 			self.nixosModules.general
+			self.nixosModules.matoo
 
 			# system
 			self.nixosModules.audio
