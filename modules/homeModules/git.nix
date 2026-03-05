@@ -10,7 +10,7 @@
 
 			lfs.enable = true;
 
-			maintenenace = {
+			maintenance = {
 				enable = true;
 				timers = {
 					weekly = "Mon 08:00:00";
