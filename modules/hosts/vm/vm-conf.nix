@@ -53,7 +53,7 @@
 	{
 		imports = [
 			inputs.home-manager.flakeModules.home-manager
-			self.homeModules.git
+			# self.homeModules.git
 			# self.nixosModules.protonmail
 		];
 
