@@ -8,5 +8,13 @@
 			};
 			lfs.enable = true;
 		};
+
+		programs.lazygit = {
+			enable = true;
+		};
+
+		programs.zsh.shellAliases = {
+			laz = "lazygit";
+		};
 	};
 }

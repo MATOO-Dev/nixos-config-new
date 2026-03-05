@@ -33,7 +33,8 @@
 		networking.hostName = "matoo-vm";
 
 		environment.systemPackages = with pkgs; [
-			git
+			# git
+			home-manager
 			vim
 		];
 
