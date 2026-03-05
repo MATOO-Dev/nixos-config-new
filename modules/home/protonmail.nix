@@ -1,4 +1,4 @@
 { ... }: {
-	inputs.home-manager.homeModules.protonmail = { ... }: {
+	flake.homeManager.protonmail = { ... }: {
 	};
 }
