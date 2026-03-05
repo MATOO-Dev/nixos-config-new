@@ -9,10 +9,7 @@
 				mode = "no-cursor";
 			};
 
-			font = {
-				# name = "font_name";
-				size = 11;
-			};
+			font.size = 11;
 
 			keybindings = {
 				"cmd+plus" = "change_font_size all +1.0";
