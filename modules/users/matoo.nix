@@ -24,6 +24,7 @@
 			self.homeModules.matoo-general
 
 			# programs
+			self.homeModules.hyprland
 			self.homeModules.git
 			# self.homeModules.kdeconnect
 			self.homeModules.kitty
