@@ -25,6 +25,7 @@
 
 			# programs
 			self.homeModules.git
+			self.homeModules.kitty
 		];
 
 	};
