@@ -38,17 +38,4 @@
 
 		system.stateVersion = "25.11";
 	};
-
-	flake.homeConfigurations.matoo = inputs.home-manager.lib.homeManagerConfiguration {
-		pkgs = inputs.nixpkgs;
-
-		modules = [
-			# general
-			self.homeModules.matoo
-
-			# programs
-			self.homeModules.git
-		];
-
-	};
 }
