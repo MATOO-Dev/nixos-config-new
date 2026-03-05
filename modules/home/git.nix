@@ -1,5 +1,5 @@
 { ... }: {
-	flake.homeManager.git = { ... }: {
+	flake.homeModules.git = { ... }: {
 		programs.git = {
 			enable = true;
 			userName = "MATOO-Dev";
