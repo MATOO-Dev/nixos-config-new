@@ -42,14 +42,16 @@
 	flake.homeConfigurations.matoo = inputs.home-manager.lib.homeManagerConfiguration {
 		pkgs = inputs.nixpkgs;
 		modules = [
+			inputs.home-manager.flakeModules.home-manager
 			self.homeModules.matoo-home
 		];
+
+		home.stateVersion = "25.11";
 	};
 
-	flake.homeModules.matoo-home = { pkgs, ... }:
+	flake.homeModules.matoo-home = { ... }:
 	{
 		imports = [
-			inputs.home-manager.flakeModules.home-manager
 			self.homeModules.git
 			# self.nixosModules.protonmail
 		];
