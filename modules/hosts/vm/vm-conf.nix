@@ -49,11 +49,11 @@
 		];
 	};
 
-	flake.home-modules.matoo-home = {...}:
+	flake.home-modules.matoo-home = { pkgs, ... }:
 	{
 		imports = [
 			inputs.home-manager.flakeModules.home-manager
-			# self.homeModules.git
+			self.homeModules.git
 			# self.nixosModules.protonmail
 		];
 
