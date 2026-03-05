@@ -30,6 +30,9 @@
 	};
 
 	flake.homeModules.matoo-general = { ... }: {
+		# let home manager install and manage itself
+		programs.home-manager.enable = true;
+
 		home = {
 			username = "matoo";
 			homeDirectory = "/home/matoo";
