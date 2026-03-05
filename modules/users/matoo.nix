@@ -25,7 +25,9 @@
 
 			# programs
 			self.homeModules.git
+			# self.homeModules.kdeconnect
 			self.homeModules.kitty
+			# self.homeModules.zsh
 		];
 
 	};
@@ -39,6 +41,9 @@
 			homeDirectory = "/home/matoo";
 			stateVersion = "25.11";
 		};
+
+		# mute home manager news
+		# news.display = "silent";
 	};
 
 }
