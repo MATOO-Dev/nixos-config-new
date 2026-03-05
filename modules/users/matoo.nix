@@ -1,6 +1,6 @@
 { inputs, self, ... }: {
 	flake.homeConfigurations.matoo = inputs.home-manager.lib.homeManagerConfiguration {
-		pkgs = inputs.nixpkgs;
+		pkgs = inputs.nixpkgs.legacyPackages."x86_64-linux";
 
 		modules = [
 			# general
