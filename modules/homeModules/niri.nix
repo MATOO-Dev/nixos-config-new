@@ -4,6 +4,6 @@
 			niri
 		];
 
-		home.file.".config/niri/".source = lib.file.mkOutOfStoreSymlink ./../../dotfiles/niri/;
+		home.file.".config/niri/".source = lib.file.mkOutOfStoreSymlink ./../../dotfiles/niri;
 	};
 }
