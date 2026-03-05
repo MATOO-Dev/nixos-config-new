@@ -4,6 +4,6 @@
 			niri
 		];
 
-		home.file = { "path" = lib.file.mkOutOfStoreSymlink "./../../dotfiles/niri/config.kdl"; };
+		home.file.".config/niri/".source = lib.file.mkOutOfStoreSymlink ./../../dotfiles/niri/;
 	};
 }
