@@ -45,7 +45,7 @@
 	flake.homeConfigurations.matoo-home = inputs.home-manager.lib.homeManagerConfiguration {
 		pkgs = inputs.nixpkgs;
 		modules = [
-			self.home-manager.homeModules.matoo-home
+			self.homeManager.homeModules.matoo-home
 		];
 	};
 
