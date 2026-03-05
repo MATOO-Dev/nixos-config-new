@@ -4,7 +4,7 @@
 
 		modules = [
 			# general
-			self.homeModules.matoo
+			self.homeModules.matoo-general
 
 			# programs
 			self.homeModules.git
@@ -12,7 +12,7 @@
 
 	};
 
-	flake.homeModules.matoo = { ... }: {
+	flake.homeModules.matoo-general = { ... }: {
 		home = {
 			username = "matoo";
 			homeDirectory = "/home/matoo";
