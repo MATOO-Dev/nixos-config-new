@@ -49,7 +49,7 @@
 		];
 	};
 
-	flake.home-manager.homeModules.matoo-home = { pkgs, ... }:
+	inputs.home-manager.homeModules.matoo-home = { pkgs, ... }:
 	{
 		imports = [
 			inputs.home-manager.flakeModules.home-manager
