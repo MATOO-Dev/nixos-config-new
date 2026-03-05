@@ -1,1 +1,1 @@
-home-manager switch --flake .#matoo-home
+home-manager switch --flake .#matoo
