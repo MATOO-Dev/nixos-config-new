@@ -2,13 +2,6 @@
 {
     flake.nixosConfigurations.matoo-vm = inputs.nixpkgs.lib.nixosSystem {
         modules = [
-            self.nixosModules.matoo-vm
-        ];
-    };
-
-    flake.nixosModules.matoo-vm = { pkgs, ... }:
-	{
-		imports = [
 			# general
 			self.nixosModules.general
 
@@ -27,11 +20,15 @@
 			self.nixosModules.virtualization
 
 			# hardware
+			self.nixosModules.vm-general
 			self.nixosModules.vm-hardware
 			inputs.disko.nixosModules.disko
 			self.diskoConfigurations.matoo-vm
-		];
+        ];
+    };
 
+    flake.nixosModules.vm-general = { pkgs, ... }:
+	{
 		networking.hostName = "matoo-vm";
 
 		environment.systemPackages = with pkgs; [
