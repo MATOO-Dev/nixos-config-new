@@ -27,6 +27,7 @@
 			self.homeModules.git
 			# self.homeModules.kdeconnect
 			self.homeModules.kitty
+			self.homeModules.niri
 			# self.homeModules.zsh
 		];
 

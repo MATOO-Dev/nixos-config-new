@@ -1,0 +1,82 @@
+add_newline = true
+scan_timeout = 10
+
+format = """
+$os\
+[](bg:theme0a fg:theme09)\
+$directory\
+[](bg:theme0b fg:theme0a)\
+$git_branch\
+[](bg:theme0c fg:theme0b)\
+$git_status\
+[](fg:theme0c)\
+\u0020\
+"""
+
+right_format = """
+$character\
+${env_var.ZVM_MODE}\
+[](fg:theme0d)\
+$time\
+[](fg:theme0d)\
+"""
+
+palette = 'rosepine'
+
+[palettes.rosepine]
+theme01 = "#1f1d2e"
+theme08 = "#eb6f92"
+theme09 = "#f6c177"
+theme0a = "#ebbcba"
+theme0b = "#31748f"
+theme0c = "#9ccfd8"
+theme0d = "#c4a7e7"
+
+[os]
+disabled = false
+format = '[ $symbol ](bg:theme09 fg:theme01)'
+
+[os.symbols]
+Arch = "󰣇"
+
+[directory]
+disabled = false
+format = '[ $path ](bg:theme0a fg:theme01)'
+truncation_length = 1
+truncation_symbol = "../"
+
+[directory.substitutions]
+"~" = " "
+"Downloads" = " "
+"Documents" = "󰈙 "
+"Repos" = " "
+"Dotfiles" = " "
+"Rust" = " "
+
+[git_branch]
+disabled = false
+symbol = "󰘬"
+format = '[ $symbol $branch ](bg:theme0b fg:theme01)'
+
+[git_status]
+disabled = false
+ahead = " 󰁝$count "
+behind = " 󰁅$count "
+untracked = " ?$count "
+modified = " !$count "
+staged = " +$count "
+renamed = " 󰄾$count "
+deleted = " x$count "
+format = '[$all_status$ahead$behind](bg:theme0c fg:theme01)'
+
+[character]
+format = "$symbol "
+# success_symbol = '[](fg:theme0b)'
+success_symbol = '[✔](fg:theme0b)'
+# error_symbol = '[](fg:theme08)'
+error_symbol = '[✘](fg:theme08)'
+
+[time]
+disabled = false
+time_format = "%R"
+format = '[$time](bg:theme0d fg:theme01)'
