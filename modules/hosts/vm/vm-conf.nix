@@ -41,11 +41,12 @@
 
 	flake.homeConfigurations.matoo = inputs.home-manager.lib.homeManagerConfiguration {
 		pkgs = inputs.nixpkgs;
-		home.username = "matoo";
-		home.homeDirectory = "/home/matoo";
-		home.stateVersion = "25.11";
 
 		modules = [
+			# general
+			self.homeModules.matoo
+
+			# programs
 			self.homeModules.git
 		];
 
