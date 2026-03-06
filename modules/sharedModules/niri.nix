@@ -10,18 +10,12 @@
 		};
 
 		security = {
-			# disabled because of vm
-			# pam.services.swaylock = {};
 			polkit.enable = true;
 		};
 
-
 		environment.systemPackages = with pkgs; [
-			alacritty
-			fuzzel
-			swaylock
+			# notifications
 			mako
-			swayidle
 		];
 	};
 
